@@ -31,7 +31,7 @@ class App extends Component {
   removeTrack(track) {
     let tracks = this.state.playlistTracks;
     if (tracks.indexOf(track) > -1) {
-      tracks.filter(currentSong => currentSong.id !== track.id);
+      tracks = tracks.filter(currentSong => currentSong.id !== track.id);
       this.setState({playlistTracks: tracks});
     }
   }
